@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mommy Business - Contact Us</title>
+
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<style type="text/css">
+			form  {
+				background-color: #a68a72;
+				color: #ffffff;
+				border-radius: 25px;
+				padding: 25px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header>
+			<img src="images/logo.jpg" alt="Mommy Business logo" width="200" height="100">
+
+			<h1>Mommy Business - Contact Us</h1>
+		</header>
+
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="aboutus.html">About Us</a></li>
+				<li><a href="chef.html">Meet Lilly</a></li>
+				<li><a href="history.html">History</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="secretmenu.html">Secret Menu</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<h2>Tell Us What You Think</h2>
+			<form action=" " method="post" autocomplete="on">
+				<label>First Name:</label>
+				<input type="text" name="first" required><br>
+
+				<label>Last Name:</label>
+				<input type="text" name="last" required><br><br>
+
+				<label>Select your gender:</label><br>
+				<input type="radio" name="gender" value="male" checked> Male<br>
+				<input type="radio" name="gender" value="female"> Female<br>
+				<input type="radio" name="gender" value="trans"> Transitioning<br><br>
+
+				<label>Email:</label>
+				<input type="email" name="email" autocomplete="off" required><br>
+
+				<label>Phone Number:</label>
+				<input type="tel" name="phone"><br><br>
+
+				<label>Which menu item did you like the most?</label><br>
+				<select name="menu-items">
+					<option value="*">Please Select One</option>
+					<option value="one">Menu Item One</option>
+					<option value="two">Menu Item Two</option>
+					<option value="three">Menu Item Three</option>
+				</select><br><br>
+
+				<label>Subscribe for updates on the newest recipes?</label><br>
+				<input type="checkbox" name="subscribe" value="yes" checked> Yes<br>
+
+				<h2>Enter your four-digit passcode then click OK:</h2>
+				<input id="id1" type="number" min="1000" max="9999">
+				<button onclick="myFunction()">OK</button>
+				<p id="passcode></p>
+
+				<div>
+					<label>Enter your comments below:</label><br>
+					<textarea name="comment" rows="6" cols="60"></textarea>
+				</div><br><br>
+
+				<button type="submit" value="Submit">Submit</button>
+				<button type="reset" value="Reset">Reset</button>
+
+				<script>
+					function myFunction () {
+						var inpObj = document.getElementByld ("id1");
+
+						if (inpObj.checkValidity () == false) {
+							document.getElementByld ("passcode").innerHTML == inpObj.validationMessage;
+						}
+						else {
+							document.getElementByld ("passcode").innerHTML = "Passcode Valid";
+						}
+					}
+				</script>
+			</form>
+		</main>
+
+		<footer>
+			<p><a href="index.html">Home</a> | <a href="aboutus.html">About Us</a> | <a href="chef.html">Meet Lilly</a> |
+			   <a href="history.html">History</a> | <a href="menu.html">Menu</a> | <a href="contactus.html">Contact Us</a> | <a href="secretmenu.html">Secret Menu</a></p>
+		</footer>
+	</body>
+</html>
